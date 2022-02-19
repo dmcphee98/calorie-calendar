@@ -19,21 +19,26 @@
     <header>
         <h1>Calorie Calendar</h1>
     </header>
-    <div class="onoffswitch-container-center">
-        <div class="onoffswitch-container">
-            <div class="onoffswitch">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                <label class="onoffswitch-label" for="myonoffswitch">
-                    <span class="onoffswitch-inner"></span>
-                    <span class="onoffswitch-switch"></span>
-                </label>
-            </div>
-        </div>
-    </div>
     <div class="form-container-center">
         <div class="form-container">
             <img src="./undraw_hiking_re_k0bc.svg" class="form-image">
             <form>
+                <div class="switch-container">
+                    <div class="gender-switch">
+                        <input type="checkbox" name="gender-switch" class="gender-switch-checkbox" id="mygender-switch" checked>
+                        <label class="gender-switch-label" for="mygender-switch">
+                            <span class="gender-switch-inner"></span>
+                            <span class="gender-switch-switch"></span>
+                        </label>
+                    </div>
+                    <div class="unit-switch">
+                        <input type="checkbox" name="unit-switch" class="unit-switch-checkbox" id="myunit-switch" checked>
+                        <label class="unit-switch-label" for="myunit-switch">
+                            <span class="unit-switch-inner"></span>
+                            <span class="unit-switch-switch"></span>
+                        </label>
+                    </div>
+                </div>
                 <input type="text" placeholder="Gender" class="todo-input">
                 <input type="text" placeholder="Height (cm)" class="todo-input">
                 <input type="text" placeholder="Weight (kg)" class="todo-input">

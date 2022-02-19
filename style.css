@@ -7,9 +7,9 @@
 
 body {
     /* Background gradient */
-    background: #DCE35B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #DCE35B;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     /* Font family */
     font-family: 'Roboto Serif', sans-serif;
@@ -20,7 +20,6 @@ header,
 form {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -28,6 +27,12 @@ header {
     font-family: 'Roboto Serif', sans-serif;
     font-size: 2rem;
     height: 30vh;
+    align-items: flex-end;
+}
+
+h1 {
+    color: #81b645;  /* fallback for old browsers */
+    padding: 1.5rem;
 }
 
 .form-container-center {
@@ -46,6 +51,7 @@ header {
 
 form {
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .form-image {
@@ -60,72 +66,133 @@ form input {
     border-radius: 50px;
     padding: 0.85rem 0rem 0.65rem 1.5rem;
     margin: 0.4rem;
-    background-color: rgba(255, 255, 255, 0.85);
+    color: white;
+    background: #81b645;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #81b645, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #81b645, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+::placeholder{
+    color: white;
 }
 
 /* Stop black border appearing around text field when clicked */
 input:focus{
     outline: none;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: #81b645;
 }
 
-.onoffswitch-container-center {
+.switch-container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.onoffswitch-container {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 50%;
+    width: 80%;
     margin: 0.3rem 0rem 0.3rem 0rem;
 }
 
-.onoffswitch {
-    position: relative; width: 155px;
+.gender-switch {
+    position: relative; width: 70%;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; user-select: none;
 }
-.onoffswitch-checkbox {
+.gender-switch-checkbox {
     display: none;
 }
-.onoffswitch-label {
+.gender-switch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid white; border-radius: 20px;
+    border: 2px solid #81b645; border-radius: 20px;
 }
-.onoffswitch-inner {
+.gender-switch-inner {
     display: block; width: 200%; margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.gender-switch-inner:before, .gender-switch-inner:after {
     display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    color: white; font-family: inherit; font-size: 1rem;
+    color: #81b645; font-family: inherit; font-size: 1rem;
     box-sizing: border-box;
 }
-.onoffswitch-inner:before {
-    content: "Metric";
+.gender-switch-inner:before {
+    content: "Male";
     padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: white;
+    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
 }
-.onoffswitch-inner:after {
-    content: "Imperial";
+.gender-switch-inner:after {
+    content: "Female";
     padding-right: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: white;
+    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
     text-align: right;
 }
-.onoffswitch-switch {
+.gender-switch-switch {
     display: block; width: 46px; margin: 2px;
-    background: white;
+    background: #81b645;
+    position: absolute; top: 0; bottom: 0;
+    right: 86.5%;
+    border: 2px solid white; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.gender-switch-checkbox:checked + .gender-switch-label .gender-switch-inner {
+    margin-left: 0;
+}
+.gender-switch-checkbox:checked + .gender-switch-label .gender-switch-switch {
+    right: 0px; 
+}
+
+
+
+
+
+
+
+.unit-switch {
+    position: relative; width: 155px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; user-select: none;
+}
+.unit-switch-checkbox {
+    display: none;
+}
+.unit-switch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #81b645; border-radius: 20px;
+}
+.unit-switch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.unit-switch-inner:before, .unit-switch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    color: #81b645; font-family: inherit; font-size: 1rem;
+    box-sizing: border-box;
+}
+.unit-switch-inner:before {
+    content: "Metric";
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
+}
+.unit-switch-inner:after {
+    content: "Imperial";
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
+    text-align: right;
+}
+.unit-switch-switch {
+    display: block; width: 46px; margin: 2px;
+    background: #81b645;
     position: absolute; top: 0; bottom: 0;
     right: 101px;
     border: 2px solid white; border-radius: 20px;
     transition: all 0.3s ease-in 0s; 
 }
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+.unit-switch-checkbox:checked + .unit-switch-label .unit-switch-inner {
     margin-left: 0;
 }
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+.unit-switch-checkbox:checked + .unit-switch-label .unit-switch-switch {
     right: 0px; 
 }
+
+
+
+
+
+
+
+
 
