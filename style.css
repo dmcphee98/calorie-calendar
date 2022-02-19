@@ -1,0 +1,131 @@
+/* Removes the basic styling of the browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    /* Background gradient */
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /* Font family */
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 1.25rem;
+}
+
+header,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: white;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 2rem;
+    height: 30vh;
+}
+
+.form-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.form-container {
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+form {
+    flex-wrap: wrap;
+}
+
+.form-image {
+    height: 100%;
+}
+
+form input {
+    width: 80%;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 50px;
+    padding: 0.85rem 0rem 0.65rem 1.5rem;
+    margin: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Stop black border appearing around text field when clicked */
+input:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.onoffswitch-container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.onoffswitch-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+    margin: 0.3rem 0rem 0.3rem 0rem;
+}
+
+.onoffswitch {
+    position: relative; width: 155px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid white; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    color: white; font-family: inherit; font-size: 1rem;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Metric";
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.15); color: white;
+}
+.onoffswitch-inner:after {
+    content: "Imperial";
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.15); color: white;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 46px; margin: 2px;
+    background: white;
+    position: absolute; top: 0; bottom: 0;
+    right: 101px;
+    border: 2px solid white; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
