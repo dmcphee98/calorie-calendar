@@ -33,6 +33,7 @@ header {
 h1 {
     color: #81b645;  /* fallback for old browsers */
     padding: 1.5rem;
+    text-align: center;
 }
 
 .form-container-center {
@@ -44,14 +45,17 @@ h1 {
 
 .form-container {
     width: 80%;
+    max-width: 35em;
     height: 50vh;
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
 }
 
 form {
     flex-wrap: wrap;
     align-items: center;
+    min-width: 10em;
 }
 
 .form-image {
@@ -64,7 +68,7 @@ form input {
     font-size: inherit;
     font-family: inherit;
     border-radius: 50px;
-    padding: 0.85rem 0rem 0.65rem 1.5rem;
+    padding: 0.85rem 0rem 0.65rem 0rem;
     margin: 0.4rem;
     color: white;
     background: #81b645;  /* fallback for old browsers */
@@ -82,117 +86,25 @@ input:focus{
     background-color: #81b645;
 }
 
-.switch-container {
+.switch-container-align {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     width: 80%;
-    margin: 0.3rem 0rem 0.3rem 0rem;
+    padding: 0.85rem 0rem 0.65rem 0;
+    margin: 0.4rem;
 }
 
-.gender-switch {
-    position: relative; width: 70%;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; user-select: none;
-}
-.gender-switch-checkbox {
-    display: none;
-}
-.gender-switch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #81b645; border-radius: 20px;
-}
-.gender-switch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.gender-switch-inner:before, .gender-switch-inner:after {
-    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    color: #81b645; font-family: inherit; font-size: 1rem;
-    box-sizing: border-box;
-}
-.gender-switch-inner:before {
-    content: "Male";
-    padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
-}
-.gender-switch-inner:after {
-    content: "Female";
-    padding-right: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
-    text-align: right;
-}
-.gender-switch-switch {
-    display: block; width: 46px; margin: 2px;
-    background: #81b645;
-    position: absolute; top: 0; bottom: 0;
-    right: 86.5%;
-    border: 2px solid white; border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
-}
-.gender-switch-checkbox:checked + .gender-switch-label .gender-switch-inner {
-    margin-left: 0;
-}
-.gender-switch-checkbox:checked + .gender-switch-label .gender-switch-switch {
-    right: 0px; 
+.gender-switch-container {
+    width: 60%;
+    border-radius: 50px;
+    padding: 1rem 0rem;
+    background: #81b645;  /* fallback for old browsers */
 }
 
-
-
-
-
-
-
-.unit-switch {
-    position: relative; width: 155px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; user-select: none;
+.unit-switch-container {
+    width: 35%;
+    border-radius: 50px;
+    padding: 1rem 0rem;
+    background: #81b645;  /* fallback for old browsers */
 }
-.unit-switch-checkbox {
-    display: none;
-}
-.unit-switch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #81b645; border-radius: 20px;
-}
-.unit-switch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.unit-switch-inner:before, .unit-switch-inner:after {
-    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    color: #81b645; font-family: inherit; font-size: 1rem;
-    box-sizing: border-box;
-}
-.unit-switch-inner:before {
-    content: "Metric";
-    padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
-}
-.unit-switch-inner:after {
-    content: "Imperial";
-    padding-right: 10px;
-    background-color: rgba(255, 255, 255, 0.15); color: #81b645;
-    text-align: right;
-}
-.unit-switch-switch {
-    display: block; width: 46px; margin: 2px;
-    background: #81b645;
-    position: absolute; top: 0; bottom: 0;
-    right: 101px;
-    border: 2px solid white; border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
-}
-.unit-switch-checkbox:checked + .unit-switch-label .unit-switch-inner {
-    margin-left: 0;
-}
-.unit-switch-checkbox:checked + .unit-switch-label .unit-switch-switch {
-    right: 0px; 
-}
-
-
-
-
-
-
-
-
-
