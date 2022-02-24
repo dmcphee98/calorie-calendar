@@ -23,22 +23,40 @@
         <div class="form-container">
             <img src="./undraw_hiking_re_k0bc.svg" class="form-image">
             <form>
-                <div class="switch-container-align">
-                    <div class="gender-switch-container">
+                <!-- Gender toggle -->
+                <label class="gender-label" for="gender-toggle">
+                    <input type="checkbox" class="checkbox" id="gender-toggle">
+                    <div class="gender-div" for="gender-toggle">
                         <div class="slider"></div>
-                        <p1 class="male">Male</p1>
-                        <p1 class="female">Female</p1>
+                        <p1 class="checkbox-unchecked noselect" >Male</p1>
+                        <p1 class="checkbox-checked noselect">Female</p1>
                     </div>
-                    <div class="unit-switch-container">
-                    
-                    </div>
+                </label>
+                
+                <div class="input-div">
+                    <input type="text" placeholder="Age" class="input">
                 </div>
-                <input type="text" placeholder="    Height (cm)" class="input">
-                <input type="text" placeholder="    Weight (kg)" class="input">
-                <input type="text" placeholder="    Age" class="input">
+
+                <!-- Units toggle -->
+                <label class="units-label" for="units-toggle">
+                    <input type="checkbox" class="checkbox" id="units-toggle">
+                    <div class="units-div" for="units-toggle">
+                        <div class="slider"></div>
+                        <p1 class="checkbox-unchecked noselect">Metric</p1>
+                        <p1 class="checkbox-checked noselect">Imperial</p1>
+                    </div>
+                </label>
+
+                <div class="input-div">
+                    <input type="text" placeholder="Height (cm)" class="input">
+                </div>
+                <div class="input-div">
+                    <input type="text" placeholder="Weight (kg)" class="input">
+                </div>
+
                 <div class="submit-outline">
                     <input type="submit" class="submit">
-                </div>            
+                </div>    
             </form>
         </div>
     </div>
