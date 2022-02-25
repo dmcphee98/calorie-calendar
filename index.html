@@ -13,6 +13,9 @@
     <!-- Link stylesheet -->
     <link rel="stylesheet" href="./style.css">
 
+    <!-- Link app.js -->
+    <script src="./app.js" defer></script>
+
     <title>Calorie Calendar</title>
 </head>
 <body>
@@ -28,13 +31,14 @@
                     <input type="checkbox" class="checkbox" id="gender-toggle">
                     <div class="gender-div" for="gender-toggle">
                         <div class="slider"></div>
-                        <p1 class="checkbox-unchecked noselect" >Male</p1>
+                        <p1 class="checkbox-unchecked noselect">Male</p1>
                         <p1 class="checkbox-checked noselect">Female</p1>
                     </div>
                 </label>
                 
                 <div class="input-div">
-                    <input type="text" placeholder="Age" class="input">
+                    <input type="number" class="input" id="age-input">
+                    <span class="placeholder-text">Age</span>
                 </div>
 
                 <!-- Units toggle -->
@@ -48,10 +52,13 @@
                 </label>
 
                 <div class="input-div">
-                    <input type="text" placeholder="Height (cm)" class="input">
+                    <input type="number" class="input" id="height-input">
+                    <span class="placeholder-text">Height (cm)</span>
                 </div>
+
                 <div class="input-div">
-                    <input type="text" placeholder="Weight (kg)" class="input">
+                    <input type="number" class="input" id="weight-input">
+                    <span class="placeholder-text">Weight (kg)</span>
                 </div>
 
                 <div class="submit-outline">

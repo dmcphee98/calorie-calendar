@@ -41,6 +41,7 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 60vh;
+    transition: transform 0.75s ease;
 }
 
 .form-container {
@@ -71,6 +72,7 @@ form {
     background: -webkit-linear-gradient(to right, #81b645, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #81b645, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .input-div:hover {
@@ -79,7 +81,7 @@ form {
 }
 
 .input {
-    width: 80%;
+    width: 90%;
     font-size: inherit;
     font-family: inherit;
     color: white;
@@ -237,4 +239,33 @@ p1 {
 
 input[type="checkbox"] {
     display: none;
+}
+
+.offscreen {
+    transform: translateX(-100%);
+}
+
+.placeholder-text {
+    pointer-events: none; 
+    position: absolute;
+    left: 5%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.right-justify {
+    left: 95%; 
+    transform: translateX(-100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
