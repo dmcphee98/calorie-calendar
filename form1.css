@@ -26,18 +26,20 @@ header {
     color: white;
     font-family: 'Roboto Serif', sans-serif;
     font-size: 2rem;
-    height: 10vh; /* Set this back to 30vh */
+    height: 30vh; /* Set this back to 30vh */
     align-items: flex-end;
 }
 
 h1 {
-    color: #81b645;  /* fallback for old browsers */
+    color: #81b645;
+    color: #63D1FF;
     padding: 1.5rem;
     text-align: center;
 }
 
 .form-container-center {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 60vh;
