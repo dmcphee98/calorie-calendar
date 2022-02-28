@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@1,200&display=swap" rel="stylesheet">
     
-    <!-- Link stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+    <!-- Link stylesheets -->
+    <link rel="stylesheet" href="./form1.css">
+    <link rel="stylesheet" href="./form2.css">
 
-    <!-- Link app.js -->
-    <script src="./app.js" defer></script>
+    <!-- Link js-->
+    <script src="./form1.js" defer></script>
+    <script src="./form2.js" defer></script>
 
     <title>Calorie Calendar</title>
 </head>
@@ -26,7 +28,6 @@
         <div class="form-container">
             <img src="./undraw_hiking_re_k0bc.svg" class="form-image">
             <form autocomplete="off">
-                <!-- Gender toggle -->
                 <label class="gender-label" for="gender-toggle">
                     <input type="checkbox" class="checkbox" id="gender-toggle">
                     <div class="gender-div" for="gender-toggle">
@@ -41,7 +42,6 @@
                     <span class="placeholder-text">Age</span>
                 </div>
 
-                <!-- Units toggle -->
                 <label class="units-label" for="units-toggle">
                     <input type="checkbox" class="checkbox" id="units-toggle">
                     <div class="units-div" for="units-toggle">
@@ -51,9 +51,19 @@
                     </div>
                 </label>
 
-                <div class="input-div">
+                <div class="input-div" id="height-metric">
                     <input type="number" class="input" id="height-input">
                     <span class="placeholder-text">Height (cm)</span>
+                </div>
+
+                <div class="input-div-ft hidden">
+                    <input type="number" class="input-imperial" id="height-input-ft">
+                    <span class="placeholder-text-imperial">Height (ft)</span>
+                </div>
+
+                <div class="input-div-in hidden">
+                    <input type="number" class="input-imperial" id="height-input-in">
+                    <span class="placeholder-text-imperial">(in)</span>
                 </div>
 
                 <div class="input-div">
@@ -67,5 +77,23 @@
             </form>
         </div>
     </div>
+    
+    <div class="date-picker-container">
+        <div class="date-picker">
+            <div class="selected-date">30 / 07 / 2019</div>
+
+            <div class="dates">
+                <div class="month">
+                    <div class="arrow-prev-month">&lt</div>
+                    <div class="mth">July 2019</div>
+                    <div class="arrow-next-month">&gt</div>
+                </div>
+
+                <div class="days"></div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>

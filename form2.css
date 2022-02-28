@@ -1,0 +1,51 @@
+.date-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.date-picker {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 60px;
+    background-color: #81b645;
+    margin: 30px auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.date-picker:hover {
+    background-color: #DCE35B;
+}
+
+.date-picker .selected-date {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.date-picker .dates {
+    /* Hidden by default */
+    display: block;
+    position: absolute;
+
+    /* Should take entire width and begin underneath date picker */
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #6ca32d;
+    color: white;
+}
+
+.date-picker .dates .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

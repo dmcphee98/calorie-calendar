@@ -4,7 +4,12 @@ const genderLabel = document.querySelector('.gender-label');
 const unitsCheckbox = document.getElementById('units-toggle');
 const unitsLabel = document.querySelector('.units-label');
 const ageInput = document.getElementById('age-input');
-const heightInput = document.getElementById('height-input');
+const heightInputMetric = document.getElementById('height-input');
+const heightInputFt = document.getElementById('height-input-ft');
+const heightInputIn = document.getElementById('height-input-in');
+const heightInputDivMetric = document.getElementById('height-metric');
+const heightInputDivFt = document.querySelector('.input-div-ft');
+const heightInputDivIn = document.querySelector('.input-div-in');
 const weightInput = document.getElementById('weight-input');
 const submitButton = document.querySelector('.submit');
 const formPage = document.querySelector('.form-container-center');
@@ -13,11 +18,14 @@ const formPage = document.querySelector('.form-container-center');
 genderCheckbox.addEventListener('click', toggleGender);
 unitsCheckbox.addEventListener('click', toggleUnits);
 submitButton.addEventListener('click', submitForm);
-
 ageInput.addEventListener('focus', movePlaceholderTextRight);
 ageInput.addEventListener('focusout', movePlaceholderTextLeftEvent);
-heightInput.addEventListener('focus', movePlaceholderTextRight);
-heightInput.addEventListener('focusout', movePlaceholderTextLeftEvent);
+heightInputMetric.addEventListener('focus', movePlaceholderTextRight);
+heightInputMetric.addEventListener('focusout', movePlaceholderTextLeftEvent);
+heightInputFt.addEventListener('focus', movePlaceholderTextRight);
+heightInputFt.addEventListener('focusout', movePlaceholderTextLeftEvent);
+heightInputIn.addEventListener('focus', movePlaceholderTextRight);
+heightInputIn.addEventListener('focusout', movePlaceholderTextLeftEvent);
 weightInput.addEventListener('focus', movePlaceholderTextRight);
 weightInput.addEventListener('focusout', movePlaceholderTextLeftEvent);
 
@@ -27,11 +35,16 @@ function toggleGender(event) {
 }
 
 function toggleUnits(event) {
-    let heightText = heightInput.nextElementSibling;
-    if (!heightText.classList.contains('right-justify')) {
-        heightText.innerHTML = unitsCheckbox.checked ? 'Height (ft)' : 'Height (cm)';
+    let isImperial = unitsCheckbox.checked;
+
+    if (isImperial) {
+        heightInputDivMetric.classList.add('hidden');
+        heightInputDivFt.classList.remove('hidden');
+        heightInputDivIn.classList.remove('hidden');
     } else {
-        heightText.innerHTML = unitsCheckbox.checked ? 'ft' : 'cm'; 
+        heightInputDivFt.classList.add('hidden');
+        heightInputDivIn.classList.add('hidden');
+        heightInputDivMetric.classList.remove('hidden');
     }
 
     let weightText = weightInput.nextElementSibling;
@@ -48,14 +61,17 @@ function submitForm(event) {
 }
 
 function movePlaceholderTextRight(event) {
-    console.log("ooft");
     let placeholderText = event.target.nextElementSibling;
     placeholderText.classList.add('right-justify');
 
     if (event.target === ageInput) {
         placeholderText.innerHTML = 'Years'
-    } else if (event.target === heightInput) {
-        placeholderText.innerHTML = unitsCheckbox.checked? 'ft' : 'cm';
+    } else if (event.target === heightInputMetric) {
+        placeholderText.innerHTML = 'cm';
+    } else if (event.target === heightInputFt) {
+        placeholderText.innerHTML = 'ft';
+    } else if (event.target === heightInputIn) {
+        placeholderText.innerHTML = 'in';
     } else {
         placeholderText.innerHTML = unitsCheckbox.checked? 'lbs': 'kg';
     }
@@ -73,8 +89,12 @@ function movePlaceholderTextLeft(element) {
 
         if (element === ageInput) {
             placeholderText.innerHTML = 'Age'
-        } else if (element === heightInput) {
-            placeholderText.innerHTML = unitsCheckbox.checked? 'Height (ft)' : 'Height (cm)';
+        } else if (element === heightInputMetric) {
+            placeholderText.innerHTML = 'Height (cm)';
+        } else if (element === heightInputFt) {
+            placeholderText.innerHTML = 'Height (ft)';
+        } else if (element === heightInputIn) {
+            placeholderText.innerHTML = '(in)';
         } else {
             placeholderText.innerHTML = unitsCheckbox.checked? 'Weight (lbs)' : 'Weight (kg)';
         }
