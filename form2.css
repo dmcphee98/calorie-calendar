@@ -51,6 +51,7 @@
     /* repeats 7 colums, each with 1 fraction of the width weight */
     grid-template-columns: repeat(7, 1fr);
     height: 200px;
+    font-size: 0.9em;
 }
 
 .day {
@@ -71,4 +72,12 @@
 .day.selected {
     background-color: white;
     color: #63D1FF;
+}
+
+.days-of-week {
+    font-size: 0.7em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
 }
