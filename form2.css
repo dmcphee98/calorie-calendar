@@ -1,28 +1,13 @@
-.date-picker-container-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-.date-picker-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    max-width: 35em;
-}
-
 .date-picker {
-    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
+    font-weight: 500;
     margin: 30px auto;
     cursor: pointer;
     user-select: none;
-    flex-wrap: wrap;
 }
 
 .date-picker .dates {

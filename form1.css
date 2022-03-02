@@ -12,7 +12,7 @@ body {
     /*background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     /* Font family */
-    font-family: 'Roboto Serif', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 1.25rem;
     padding-top: 25vh;
 }
@@ -44,7 +44,7 @@ h1 {
     transition: color 0.3s ease;
 }
 
-.form-container-center {
+.page-center {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -52,14 +52,13 @@ h1 {
     transition: transform 0.75s ease;
 }
 
-.form-container {
+.page-content {
     width: 80%;
     max-width: 35em;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
 }
 
 form {

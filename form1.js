@@ -13,7 +13,7 @@ const heightInputDivFt = document.querySelector('.input-div-ft');
 const heightInputDivIn = document.querySelector('.input-div-in');
 const weightInput = document.getElementById('weight-input');
 const submitButton = document.querySelector('.submit');
-const page1 = document.querySelector('.form-container-center');
+const page1 = document.querySelector('.page1-center');
 const page2 = document.querySelector('.date-picker-container-center');
 
 // Event Listeners
