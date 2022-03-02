@@ -1,4 +1,5 @@
 // Selectors
+const title = document.querySelector('h1');
 const genderCheckbox = document.getElementById('gender-toggle');
 const genderLabel = document.querySelector('.gender-label');
 const unitsCheckbox = document.getElementById('units-toggle');
@@ -58,8 +59,11 @@ function toggleUnits(event) {
 
 function submitForm(event) {
     event.preventDefault();
-    page1.classList.add('offscreen');
-    page2.classList.remove('offscreen-right');
+    //page1.classList.add('offscreen');
+
+    var elmntToView = document.querySelector(".submit.blue-text");
+    elmntToView.scrollIntoView({behavior: 'smooth'}); 
+    title.classList.add('blue-text');
 }
 
 function movePlaceholderTextRight(event) {

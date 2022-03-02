@@ -41,13 +41,14 @@ h1 {
     /* color: #63D1FF; */
     padding: 1.5rem;
     text-align: center;
+    transition: color 0.3s ease;
 }
 
 .form-container-center {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60vh;
+    align-items: flex-start;
+    height: 80vh;
     transition: transform 0.75s ease;
 }
 
@@ -69,52 +70,50 @@ form {
 
 .form-image {
     width: 40%;
+    height: 100%;
 }
 
 .input-div,
 .input-div-ft {
+    height: 9vh;
+    max-height: 3.2rem;
     border-radius: 50px;
-    padding: 0.85rem 0rem 0.65rem 0rem;
     background: #81b645;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #81b645, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #81b645, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .input-div {
     width: 80%;
-    margin: 0.4rem 0rem;
+    margin: 0.5vh 0rem;
 }
 
 .input-div-ft {
     width: 48%;
-    margin: 0.4rem 0.3rem;
+    margin: 0.5vh 0.3rem;
 }
 
 .input-div-in {   
+    display: flex;
+    align-items: center;
     border-radius: 50px;
-    padding: 0.85rem 0rem 0.65rem 0rem;
     width: 30%;
-    margin: 0.4rem 0.3rem;
+    height: 9vh;
+    max-height: 3.2rem;
+    margin: 0.5vh 0.3rem;
     background-color: #DCE35B;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.input-div:hover {
-    padding: 1.05rem 0rem 0.85rem 0rem;
-    width: 85%;
-}
-
-.input-div-ft:hover {
-    padding: 1.05rem 0rem 0.85rem 0rem;
-    width: 53%;
-}
-
+.input-div:hover,
+.input-div-ft:hover,
 .input-div-in:hover {
-    padding: 1.05rem 0rem 0.85rem 0rem;
-    width: 35%;
+    padding: 0.3rem;
 }
 
 .input {
@@ -170,7 +169,8 @@ form {
     font-family: inherit;
     border-radius: 50px;
     margin: 0.25rem 0.25rem;
-    padding: 0.65rem 0rem 0.45rem 0rem;
+    height: 9vh;
+    max-height: 3.2rem;
     color: #81b645;
     background-color: white;
     cursor: pointer;
@@ -196,7 +196,8 @@ input:focus{
     position: relative;
     width: 100%;
     border-radius: 50px;
-    height: 3rem;
+    height: 9vh;
+    max-height: 3.2rem;
     background: #81b645;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #81b645, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #81b645, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
