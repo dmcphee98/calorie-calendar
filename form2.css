@@ -1,26 +1,37 @@
-.date-picker-container {
+.date-picker-container-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.date-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 35em;
+}
+
 .date-picker {
-    position: relative;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 320px;
-    height: 60px;
-    background-color: #81b645;
     margin: 30px auto;
     cursor: pointer;
     user-select: none;
+    flex-wrap: wrap;
 }
 
 .date-picker .dates {
     /* Should take entire width and begin underneath date picker */
-    left: 0;
-    right: 0;
-    background-color: #63D1FF;
+    width: 80%;
+    background-color: #3bc4ff;
     color: white;
+    border-radius: 15px;
+    font-family: 'Roboto Slab', serif;
+    margin: 0.4rem;
 }
 
 .date-picker .dates .month {
@@ -36,14 +47,15 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    border-radius: 15px;
 }
 
 .arrow:hover {
-    background-color: white;
+    background-color: #91dcfc;
 }
 
 .arrow:active {
-    background-color: red;
+    background-color: #beeafd;
 }
 
 .days {
@@ -59,6 +71,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    margin: 0rem 0.3rem;
 }
 
 .day-othermonth {
@@ -66,18 +79,44 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    color: gray;
+    color: #13a5e4;
 }
 
-.day.selected {
+.day:hover {
+    background-color: #95dfff;
+    color: #63D1FF;
+}
+
+.day:active {
     background-color: white;
     color: #63D1FF;
 }
 
 .days-of-week {
-    font-size: 0.7em;
+    font-size: 0.8em;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: gray;
+    color: #3f3d56;
+}
+
+.days-of-week div {
+    padding: 0.25rem 0rem;
+}
+
+.day.selected {
+    background-color: white;
+    color: #13a5e4;
+}
+
+.offscreen-right {
+    transform: translateX(100%);
+}
+
+.blue {
+    background: #3bc4ff;
+}
+
+.blue-text {
+    color: #3bc4ff;
 }

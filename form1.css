@@ -14,6 +14,7 @@ body {
     /* Font family */
     font-family: 'Roboto Serif', sans-serif;
     font-size: 1.25rem;
+    padding-top: 25vh;
 }
 
 header,
@@ -24,22 +25,26 @@ form {
 
 header {
     color: white;
+    background: white;
     font-family: 'Roboto Serif', sans-serif;
     font-size: 2rem;
-    height: 30vh; /* Set this back to 30vh */
-    align-items: flex-end;
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 h1 {
-    color: #81b645;
-    color: #63D1FF;
+    color: #81b645; 
+    /* color: #63D1FF; */
     padding: 1.5rem;
     text-align: center;
 }
 
 .form-container-center {
-    display: none;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
@@ -67,8 +72,7 @@ form {
 }
 
 .input-div,
-.input-div-ft,
-.input-div-in {
+.input-div-ft {
     border-radius: 50px;
     padding: 0.85rem 0rem 0.65rem 0rem;
     background: #81b645;  /* fallback for old browsers */
@@ -89,8 +93,13 @@ form {
 }
 
 .input-div-in {   
+    border-radius: 50px;
+    padding: 0.85rem 0rem 0.65rem 0rem;
     width: 30%;
     margin: 0.4rem 0.3rem;
+    background-color: #DCE35B;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .input-div:hover {

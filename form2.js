@@ -4,6 +4,8 @@ const mth = document.querySelector('.mth');
 const nextMonth = document.querySelector('.next-month');
 const prevMonth = document.querySelector('.prev-month');
 const days = document.querySelector('.days');
+const submitButton2 = document.querySelector('.submit');
+
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -26,6 +28,8 @@ populateDays(month);
 // Event Listeners
 nextMonth.addEventListener('click', incrementMonth)
 prevMonth.addEventListener('click', decrementMonth)
+submitButton2.addEventListener('click', submitForm);
+
 
 // Functions
 function incrementMonth(e) {
@@ -67,7 +71,6 @@ function populateDays() {
     for (let j = date.getDay(); j > 0; j--, totalDays++) {
         var yesterday = new Date(date.getTime());
         yesterday.setDate(date.getDate() - j);
-        console.log(yesterday.getDate());
         addDay(yesterday.getDate(), false);
     }
     // Add days from current month
@@ -82,12 +85,38 @@ function populateDays() {
     }
 }
 
-function addDay(textContent, currentMonth) {
+function addDay(dayNumber, currentMonth) {
     const day = document.createElement('div');
     
     if (currentMonth) day.classList.add('day');
     else day.classList.add('day-othermonth');
 
-    day.textContent = textContent;
+    day.textContent = dayNumber;
+
+    if (currentMonth) {
+        day.addEventListener('click', function() {
+            selectedDate = new Date(year, month+1, dayNumber+1);
+            selectedDay = dayNumber+1;
+            selectedMonth = month;
+            selectedYear = year;
+
+            populateDays();
+        });
+    } else {
+            day.addEventListener('click', function() {
+                if (dayNumber > 15) decrementMonth();
+                else incrementMonth();
+                selectedDate = new Date(year, month+1, dayNumber+1);
+                selectedDay = dayNumber+1;
+                selectedMonth = month;
+                selectedYear = year;
+                populateDays();
+            });
+    }
+
+    if (dayNumber+1 == selectedDay && month == selectedMonth && year == selectedYear) {
+        day.classList.add('selected');
+    }
+
     days.appendChild(day);
 }

@@ -12,7 +12,8 @@ const heightInputDivFt = document.querySelector('.input-div-ft');
 const heightInputDivIn = document.querySelector('.input-div-in');
 const weightInput = document.getElementById('weight-input');
 const submitButton = document.querySelector('.submit');
-const formPage = document.querySelector('.form-container-center');
+const page1 = document.querySelector('.form-container-center');
+const page2 = document.querySelector('.date-picker-container-center');
 
 // Event Listeners
 genderCheckbox.addEventListener('click', toggleGender);
@@ -49,15 +50,16 @@ function toggleUnits(event) {
 
     let weightText = weightInput.nextElementSibling;
     if (!weightText.classList.contains('right-justify')) {
-        weightText.innerHTML = unitsCheckbox.checked ? 'Weight (lbs)' : 'Weight (kg)';
+        weightText.innerHTML = unitsCheckbox.checked ? 'Current Weight (lb)' : 'Current Weight (kg)';
     } else {
-        weightText.innerHTML = unitsCheckbox.checked ? 'lbs' : 'kg';
+        weightText.innerHTML = unitsCheckbox.checked ? 'lb' : 'kg';
     }
 }
 
 function submitForm(event) {
     event.preventDefault();
-    formPage.classList.add('offscreen');
+    page1.classList.add('offscreen');
+    page2.classList.remove('offscreen-right');
 }
 
 function movePlaceholderTextRight(event) {
@@ -73,7 +75,7 @@ function movePlaceholderTextRight(event) {
     } else if (event.target === heightInputIn) {
         placeholderText.innerHTML = 'in';
     } else {
-        placeholderText.innerHTML = unitsCheckbox.checked? 'lbs': 'kg';
+        placeholderText.innerHTML = unitsCheckbox.checked? 'lb': 'kg';
     }
 }
 
@@ -96,7 +98,7 @@ function movePlaceholderTextLeft(element) {
         } else if (element === heightInputIn) {
             placeholderText.innerHTML = '(in)';
         } else {
-            placeholderText.innerHTML = unitsCheckbox.checked? 'Weight (lbs)' : 'Weight (kg)';
+            placeholderText.innerHTML = unitsCheckbox.checked? 'Current Weight (lb)' : 'Current Weight (kg)';
         }
     }
 }
